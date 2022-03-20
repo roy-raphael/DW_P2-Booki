@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- CONSIGNES
+Choisir le format (& taile) d'image le plus adapté par rapport à la résolution et au temps de chargement
+Couleurs : bleu (#0065FC), bleu clair (#DEEBFF) et gris pour le fond (#F2F2F2)
+Noms de classes et ids en kebab-case
+Utiliser px (margins & padding) et % (widths) : pas de REM ou EM !
+Utiliser Flexbox (pas de Grid)
+Aucun framework CSS ou préprocesseur CSS autorisé
+Valide aux validateurs W3C HTML et CSS
+Compatible avec les dernières versions de Chrome et de Firefox -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="normalize/style.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 992px)" href="css/tablet.css" />
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css" />
 
     <!-- Fonts (online) -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!-- Icon banks (online) -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
 
     <!-- Title & Description -->
     <title>Page Title. Maximum length 60-70 characters</title>
@@ -19,10 +37,16 @@
 </head>
 
 <body>
-    <div id="main_wrapper">
+    <div id="main-wrapper">
         <!-- Header -->
         <header>
-
+            <img src="images/logo/Booki.png" alt="Logo de Booki" />
+            <nav>
+                <ul>
+                    <li>Hébergements</li>
+                    <li>Activités</li>
+                </ul>
+            </nav>
         </header>
 
         <!-- Main content -->

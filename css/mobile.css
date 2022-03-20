@@ -1,0 +1,39 @@
+#main-wrapper
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Header  */
+
+header
+{
+    flex-direction: column;
+    align-items: center;
+}
+
+header img
+{
+    /* because the image is too large of 70px at the right side of the logo */
+    margin-left: 40px;
+    width: 30%;
+}
+
+nav
+{
+    width: 100%;
+}
+
+nav li
+{
+    list-style-type: none;
+    width: 50%;
+    padding: 0 0 10px 0;
+    border-top: 0px;
+    border-bottom: 4px solid #F2F2F2;
+}
+
+nav li:active
+{
+    border-color: #0065FC;
+}
