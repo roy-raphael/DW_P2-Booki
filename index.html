@@ -17,7 +17,7 @@ Compatible avec les dernières versions de Chrome et de Firefox -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="normalize/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 992px)" href="css/tablet.css" />
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css" />
@@ -28,12 +28,13 @@ Compatible avec les dernières versions de Chrome et de Firefox -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!-- Icon banks (online) -->
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" /> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"> -->
 
     <!-- Title & Description -->
-    <title>Page Title. Maximum length 60-70 characters</title>
-    <meta name="description" content="Page description. No longer than 155 characters." />
+    <title>Booki</title>
+    <meta name="description" content="Booki : outil de planification de vacances" />
+    <link rel="shortcut icon" href="images/logo/Booki.png">
 </head>
 
 <body>
@@ -42,16 +43,54 @@ Compatible avec les dernières versions de Chrome et de Firefox -->
         <header>
             <img src="images/logo/Booki.png" alt="Logo de Booki" />
             <nav>
-                <ul>
-                    <li>Hébergements</li>
-                    <li>Activités</li>
-                </ul>
+                <p><a href="#">Hébergements</a></p>
+                <p><a href="#">Activités</a></p>
             </nav>
         </header>
 
         <!-- Main content -->
         <main>
-
+            <section id="section-search">
+                <!-- Section title -->
+                <div>
+                    <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                    <p>En plein centre-ville ou en pleine nature</p>
+                </div>
+                <!-- Search form -->
+                <form method="post" action="javascript:void(0);">
+                    <div id="location-icon" class="form-item"><i class="fas fa-map-marker-alt"></i></div>
+                    <input id="location-input" class="form-item h2" name="location" type="text" placeholder="Marseille, France" />
+                    <input id="search-button" class="form-item h2" name="search-button" type="submit" value="Rechercher" />
+                    <button id="search-icon" class="form-item fas fa-search" type="submit"></button>
+                </form>
+                <!-- Filters -->
+                <div id="filters">
+                    <h2>Filtres</h2>
+                    <div id="filters-list">
+                        <div class="filters-list-item">
+                            <div class="filters-list-icon"><i class="fas fa-money-bill-wave"></i></div>
+                            <h3 class="filters-list-text">Économique</h3>
+                        </div>
+                        <div class="filters-list-item">
+                            <div class="filters-list-icon"><i class="fas fa-child"></i></div>
+                            <h3 class="filters-list-text">Familial</h3>
+                        </div>
+                        <div class="filters-list-item">
+                            <div class="filters-list-icon"><i class="fas fa-heart"></i></div>
+                            <h3 class="filters-list-text">Romantique</h3>
+                        </div>
+                        <div class="filters-list-item">
+                            <div class="filters-list-icon"><i class="fas fa-dog"></i></div>
+                            <h3 class="filters-list-text">Animaux autorisés</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Information -->
+                <div id="information">
+                    <div id="information-icon"><i class="fas fa-info"></i></div>
+                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                </div>
+            </section>
         </main>
 
         <!-- Footer -->

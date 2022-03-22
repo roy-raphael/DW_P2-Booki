@@ -1,7 +1,21 @@
 #main-wrapper
 {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
+}
+
+main
+{
+    margin: 0 20px;    
+}
+
+p
+{
+    font-size: 16px;
+}
+
+h3
+{
+    font-size: 16px;
 }
 
 /* Header  */
@@ -24,16 +38,56 @@ nav
     width: 100%;
 }
 
-nav li
+nav p
 {
-    list-style-type: none;
     width: 50%;
-    padding: 0 0 10px 0;
+    padding: 40px 0 10px 0;
+    
     border-top: 0px;
-    border-bottom: 4px solid #F2F2F2;
+    border-bottom: 4px solid var(--light-grey);
 }
 
-nav li:active
+nav p:active
 {
-    border-color: #0065FC;
+    border-color: var(--dark-blue);
+}
+
+/* Main  */
+
+/* Search Section  */
+
+#section-search form
+{
+    width: 100%;
+}
+
+#location-input
+{
+    flex-grow: 1;
+    min-width: 10px;
+}
+
+#search-button
+{
+    display: none;
+}
+
+#search-icon
+{
+    display: initial;
+}
+
+#filters
+{
+    flex-direction: column;
+}
+
+#filters-list
+{
+    gap: 10px;
+}
+
+.filters-list-text
+{
+    padding: 0 15px;
 }
