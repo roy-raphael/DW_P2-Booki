@@ -1,36 +1,26 @@
+:root
+{
+    --global-sides-padding: 20px;
+}
+
 #main-wrapper
 {
     margin: 0;
 }
 
-main
-{
-    margin: 0 20px;    
-}
-
-p
-{
-    font-size: 16px;
-}
-
-h3
-{
-    font-size: 16px;
-}
 
 /* Header  */
 
 header
 {
     flex-direction: column;
+    padding: 0;
     align-items: center;
 }
 
 header img
 {
-    /* because the image is too large of 70px at the right side of the logo */
-    margin-left: 40px;
-    width: 30%;
+    margin: 30px 0;
 }
 
 nav
@@ -41,10 +31,11 @@ nav
 nav p
 {
     width: 50%;
-    padding: 40px 0 10px 0;
+    padding: 13px 0;
+    margin: 0 0 35px 0;
     
     border-top: 0px;
-    border-bottom: 4px solid var(--light-grey);
+    border-bottom: 3px solid var(--light-grey);
 }
 
 nav p:active
@@ -56,6 +47,19 @@ nav p:active
 
 /* Search Section  */
 
+#section-search-title h1
+{
+    margin-bottom: 15px;
+}
+
+#search-form
+{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    /* DOESN'T WORK !?! */
+    /* margin: 35px, 0, 35px, 0; */
+}
+
 #section-search form
 {
     width: 100%;
@@ -63,6 +67,7 @@ nav p:active
 
 #location-input
 {
+    padding-left: 15px;
     flex-grow: 1;
     min-width: 10px;
 }
@@ -77,9 +82,19 @@ nav p:active
     display: initial;
 }
 
+#filters, #information
+{
+    margin-left: 0;
+}
+
 #filters
 {
     flex-direction: column;
+}
+
+#filters h2
+{
+    margin-left: 0;
 }
 
 #filters-list
@@ -89,5 +104,63 @@ nav p:active
 
 .filters-list-text
 {
-    padding: 0 15px;
+    font-size: 16px; /*OK*/
+}
+
+/* Accomodations section */
+
+#section-accomodations
+{
+    padding: 0;
+    flex-direction: column-reverse;
+    gap: 0;
+}
+
+#accomodations-marseille, #accomodations-most-popular
+{
+    padding-left: var(--global-sides-padding);
+    padding-right: var(--global-sides-padding);
+    flex-basis: 100%;
+
+    border-radius: 0;
+}
+
+#accomodations-marseille
+{
+    background-color: white;
+}
+
+#accomodations-marseille-list
+{
+    flex-direction: column;
+}
+
+.card-vertical
+{
+    flex-basis: 100%;
+}
+
+.card-image-horizontal
+{
+    margin-right: 10px;
+}
+
+/* Activities section */
+
+#section-activities
+{
+    margin-top: 0;
+}
+
+#activities-list
+{
+    flex-direction: row;
+    height: initial;
+    row-gap: 25px;
+}
+
+.activity
+{
+    height: 190px;
+    flex-basis: 100%;
 }

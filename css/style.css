@@ -4,7 +4,50 @@
     --dark-blue: #0065FC;
     --light-grey: #F2F2F2;
     --dark-grey: #D9D9D9;
+    --global-sides-padding: 50px;
 }
+
+/* #my-icon-id
+{
+    height: 100px;
+    width: 100px;
+    background-color: var(--light-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .my-icon-class
+{
+    height: 100px;
+    width: 100px;
+    background-color: var(--light-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .my-icon-class
+{
+    height: 100px;
+    width: 100px;
+    background-color: var(--light-blue);
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .my-icon-class:before
+{
+    height: 100px;
+    width: 100px;
+    background-color: var(--light-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+} */
 
  *
 {
@@ -15,23 +58,22 @@
 body
 {
     margin: 0 0 0 0;
-}
-
-#main-wrapper
-{
-    margin: 0 30px;
+    max-width: 1440px;
 }
 
 p
 {
-    font-size: 17px;
+    margin: 0;
+
+    font-size: 16px;
     font-weight: 400;
 }
 
 h1
 {
-    margin-top: 35px;
-    font-size: 26px;
+    margin: 0;
+
+    font-size: 22px;
     font-weight: 700;
 }
 
@@ -39,16 +81,13 @@ h2, .h2
 {
     margin: 0;
 
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 700;
 }
 
-h3
+strong
 {
-    margin: 0;
-
-    font-size: 19px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 /* Header  */
@@ -56,13 +95,15 @@ h3
 header
 {
     display: flex;
+    padding: 0 var(--global-sides-padding);
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 }
 
 header img
 {
     margin-left: 20px;
+    height: 29px ;
     object-fit: contain;
 }
 
@@ -75,11 +116,11 @@ nav
 
 nav p
 {
-    padding: 40px 30px 20px 30px;
-    margin: 0 0 0 0;
+    margin: 0 0 50px 0;
+    padding: 50px 30px 10px 30px;
     text-align: center;
 
-    border-top: 4px solid transparent;
+    border-top: 2px solid transparent;
 }
 
 nav p:hover
@@ -95,30 +136,56 @@ nav a, nav a:visited
 
 /* Main  */
 
+section
+{
+    padding: 0 var(--global-sides-padding);
+}
+
 /* Search Section  */
+
+#section-search
+{
+    margin: 0;
+    margin-bottom: 35px;
+    /* DOESN'T WORK !?! */
+    /* margin: 0, 0, 0, 35px; */
+}
+
+#section-search-title h1
+{
+    margin-bottom: 10px;
+}
+
+#search-form
+{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    /* DOESN'T WORK !?! */
+    /* margin: 20px, 0, 30px, 0; */
+}
 
 #section-search form
 {
-    height: 50px;
     display: flex;
+    height: 52px;
     vertical-align: middle;
 }
 
 .form-item
 {
+    margin: 0;
+    padding: 0;
     height: 100%;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
 }
 
 #location-icon
 {
     display: flex;
+    width: 52px;
     justify-content: center;
     align-items: center;
-    width: 50px;
 
-    font-size: 19px;
+    font-size: 17px;
     
     background-color: var(--light-grey);
     border: 1px solid var(--light-grey);
@@ -127,24 +194,37 @@ nav a, nav a:visited
 
 #location-input
 {
-    padding-left: 20px;
+    padding-left: 15px;
+
     border: 1px solid var(--light-grey);
     border-radius: 0;
     border-right: 0;
 }
 
+#location-input:focus
+{
+    /* Negative margins to have a bigger border when focused */
+    margin-left: -1px;
+    margin-right: -2px;
+
+    outline: 0;
+    border: 2px solid var(--dark-blue);
+}
+
 #search-button
 {
-    padding: 0 20px 0 20px;
-    border-radius: 0 15px 15px 0;
+    padding: 0 15px;
 
+    border-radius: 0 15px 15px 0;
     cursor: pointer;
 }
 
 #search-icon
 {
-    border-radius: 15px;
     display: none;
+    width: 52px;
+
+    border-radius: 15px;
 }
 
 #search-button, #search-icon
@@ -156,20 +236,28 @@ nav a, nav a:visited
 
 #search-icon
 {
-    font-size: 19px;
-    min-width: 50px;
     margin-left: -20px;
+    min-width: 50px;
+
+    font-size: 17px;
 }
 
 #filters
 {
     display: flex;
-    margin-top: 35px;
+    margin-bottom: 35px;;
+}
+
+#filters, #information
+{
+    margin-left: 5px;
 }
 
 #filters h2
 {
-    margin-right: 40px;
+    margin-left: 4px;
+    margin-right: 35px;
+
     line-height: 50px;
 }
 
@@ -177,7 +265,7 @@ nav a, nav a:visited
 {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
 }
 
 .filters-list-item
@@ -185,6 +273,7 @@ nav a, nav a:visited
     display: flex;
     height: 50px;
 
+    background-color: white;
     border: 2px solid var(--dark-grey);
     border-radius: 25px;
     border-left: 0;
@@ -193,10 +282,10 @@ nav a, nav a:visited
 
 .filters-list-icon
 {
-    margin: -2px -2px -2px -2px;
+    display: flex;
+    margin: -3px -3px -3px -5px;
     width: 50px;
     height: 50px;
-    display: flex;
     justify-content: center;
     align-items: center;
 
@@ -204,38 +293,42 @@ nav a, nav a:visited
 
     color: var(--dark-blue);
     background-color: var(--light-blue);
-    border-radius: 25px;
+    border-radius: 50%;
 }
 
 .filters-list-text
 {
     display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0 20px;
+    margin: 0; /*OK*/
+    padding: 0 15px;
     height: 100%;
+    align-items: center;
+    
+    font-size: 18px; /*OK*/
+    font-weight: 700; /*OK*/
 }
 
 .filters-list-item:hover
 {
     color:var(--dark-blue);
     border-color: var(--dark-blue);
+    background-color: var(--light-grey);
 }
 
 #information
 {
-    margin-top: 30px;
     display: flex;
+    /* margin-top: 30px; */
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 10px;
 }
 
 #information-icon
 {
-    height: 26px;
-    width: 26px;
     display: flex;
+    margin-right: 10px;
+    height: 24px;
+    width: 24px;
     flex-shrink: 0;
     justify-content: center;
     align-items: center;
@@ -244,12 +337,388 @@ nav a, nav a:visited
     color: var(--dark-blue);
 
     border: 2px solid var(--dark-grey);
-    border-radius: 13px;
+    border-radius: 50%;
 }
 
 #information p
 {
-    margin: 0;
+    line-height: 24px;
+}
 
-    line-height: 26px;
+/* Accomodations section */
+
+#section-accomodations
+{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+#accomodations-marseille, #accomodations-most-popular
+{
+    padding: 40px 40px 10px 40px;
+
+    background-color: var(--light-grey);
+    border-radius: 20px;
+}
+
+#accomodations-marseille
+{
+    flex-basis: 66.7%;
+}
+
+#accomodations-most-popular
+{
+    flex-basis: 33.3%;
+}
+
+#accomodations-marseille-list, #accomodations-most-popular-list
+{
+    display: flex;
+    margin: 25px 0;
+    gap: 30px;
+}
+
+#accomodations-marseille-list
+{
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    /* align-items: flex-start; */
+}
+
+#accomodations-most-popular-list
+{
+    flex-direction: column;
+}
+
+#accomodations-most-popular-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#accomodations-most-popular-header i
+{
+    font-size: 22px;
+}
+
+#accomodations-marseille-more
+{
+    margin: 20px 0;
+}
+
+#accomodations-marseille-more a
+{
+    color: inherit; 
+    text-decoration: none;
+}
+
+/* Cards */
+
+.card
+{
+    display: flex;
+    margin: 0 0 0 0;
+
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px #999;
+}
+
+.card-vertical
+{
+    /* flex-basis to be sure to display 3 cards on the same line, whatever the gap is */
+    flex-basis: 26%;
+    flex-grow: 1;
+}
+
+.card-horizontal
+{
+    width: 100%;
+}
+
+.card-container
+{
+    display: flex;
+    margin: 5px;
+    width: 100%;
+
+    /* Remove hypertext decoration (<a> tag) */
+    color: inherit; 
+    text-decoration: none;
+}
+
+.card-container-vertical
+{
+    flex-direction: column;
+}
+
+.card-container-horizontal
+{
+    flex-direction: row;
+}
+
+.card-image
+{
+    position: relative;
+    overflow: hidden;
+    
+    border-radius: 17px;
+}
+
+.card-image-vertical
+{
+    min-height: 115px;
+    width: 100%;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card-image-horizontal
+{
+    margin-right: 10px;
+    min-height: 135px;
+    max-width: 130px;
+    display: flex;
+    flex: 1;
+    
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card-image img
+{
+    /* Center the image, and force it to overflow just a bit */
+    /* (to hide 1px line at the top) */
+    width: 101%;
+    height: 101%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    object-fit: cover;
+    filter: opacity(1);
+}
+
+.card:hover .card-image
+{
+    /* Activate the blue background only on the hover, */
+    /* to prevent the blue background to appear in the corner (border radius problems) */
+    background-color: var(--dark-blue);
+}
+
+.card:hover .card-image img
+{
+    /* Zoom the image when hover, and let's see a bit of the background (blue) */
+    width: 120%;
+    height: 120%;
+
+    filter: opacity(0.75);
+}
+
+.card-image img, .card-name, .card-price
+{
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.card:hover .card-name, .card:hover .card-price
+{
+    color: var(--dark-blue);
+}
+
+.card-body
+{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px 10px 5px 10px ;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.card-name
+{
+    margin: 0;
+}
+
+.card-price
+{
+    margin: 8px 0;
+    
+    font-size: 14px;
+}
+
+.card-notation
+{
+    /* Change the font size to reduce the space between the stars */
+    font-size: 2px;
+    
+    color: var(--dark-blue);
+}
+
+.card-notation .fa-star
+{
+    font-size: 12px;
+}
+
+.star-empty
+{
+    color: var(--dark-grey);
+}
+
+/* Activities section */
+
+#section-activities
+{
+    margin: 45px 0 60px 0;
+}
+
+#activities-title
+{
+    margin-bottom: 25px;
+}
+
+#activities-list
+{
+    display: flex;
+    row-gap: 40px;
+    width: 100%;
+    height: 445px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.activity
+{
+    margin: 0;
+    flex-grow: 1;
+    /* Width to have a space of 40px between the columns */
+    width: 22.75%;
+}
+
+.activity-full
+{
+    flex-basis: 100%;
+}
+
+.activity-bigger
+{
+    /* Flex basis based on the height without the gap */
+    flex-basis: 53.4%;
+}
+
+.activity-smaller
+{
+    /* Flex basis based on the height without the gap */
+    flex-basis: 37.6%;
+}
+
+.activity-small
+{
+    /* Flex basis based on the height without the gap */
+    flex-basis: 43.8%;
+}
+
+.activity-big
+{
+    /* Flex basis based on the height without the gap */
+    flex-basis: 47.2%;
+}
+
+.activity-container
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+    overflow: hidden;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px #999;
+    /* Remove hypertext decoration (<a> tag) */
+    color: inherit; 
+    text-decoration: none;
+}
+
+.activity-image
+{
+    position: relative;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.activity-image img
+{
+    /* Center the image, and force it to overflow just a bit */
+    /* (to hide 1px line at the top) */
+    width: 101%;
+    height: 101%;
+    position: absolute;
+    object-fit: cover;
+
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: opacity(1);
+}
+
+.activity:hover .activity-image
+{
+    /* Activate the blue background only on the hover, */
+    /* to prevent the blue background to appear in the corner (border radius problems) */
+    background-color: var(--dark-blue);
+}
+
+.activity:hover .activity-image img
+{
+    /* Zoom the image when hover, and let's see a bit of the background (blue) */
+    width: 120%;
+    height: 120%;
+
+    filter: opacity(0.75);
+}
+
+.activity-body
+{
+    display: flex;
+    height: 55px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.activity-name
+{
+    margin: 0 20px;
+}
+
+.activity-image, .activity-image img, .activity-name
+{
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.activity:hover .activity-name
+{
+    color: var(--dark-blue);
+}
+
+/* Footer */
+
+footer
+{
+    margin: 0;
+    padding: 0 var(--global-sides-padding);
+    height: 100px;
+    
+    background-color: var(--light-grey);
 }

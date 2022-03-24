@@ -1,9 +1,25 @@
-*
+:root
 {
-    box-sizing: border-box;
+    --global-sides-padding: 30px;
 }
 
-body
+#accomodations-marseille
 {
-    font-family: 'Raleway', sans-serif;
+    flex-basis: 60%;
+}
+
+#accomodations-most-popular
+{
+    flex-basis: 40%;
+}
+
+.card-vertical
+{
+    /* flex-basis to be sure to display 2 cards on the same line, whatever the gap is */
+    flex-basis: 34%;
+}
+
+.card-image-horizontal
+{
+    margin-right: 0;
 }
