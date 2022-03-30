@@ -5,49 +5,9 @@
     --light-grey: #F2F2F2;
     --dark-grey: #D9D9D9;
     --global-sides-padding: 50px;
+    --activity-base-height: 445px;
+    --activity-gap: 40px;
 }
-
-/* #my-icon-id
-{
-    height: 100px;
-    width: 100px;
-    background-color: var(--light-blue);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-/* .my-icon-class
-{
-    height: 100px;
-    width: 100px;
-    background-color: var(--light-blue);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-/* .my-icon-class
-{
-    height: 100px;
-    width: 100px;
-    background-color: var(--light-blue);
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-} */
-
-/* .my-icon-class:before
-{
-    height: 100px;
-    width: 100px;
-    background-color: var(--light-blue);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 50%;
-} */
 
  *
 {
@@ -58,41 +18,56 @@
 body
 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-#main-wrapper
+header, main, #footer-content
 {
     max-width: 1440px;
+    width: 100%;
+}
+
+footer
+{
+    width: 100%;
+}
+
+p, .p, h1, h2, .h2, h3
+{
+    margin: 0;
 }
 
 p, .p
 {
-    margin: 0;
-
     font-size: 16px;
     font-weight: 400;
-}
-
-h1
-{
-    margin: 0;
-
-    font-size: 22px;
-    font-weight: 700;
-}
-
-h2, .h2
-{
-    margin: 0;
-
-    font-size: 18px;
-    font-weight: 700;
 }
 
 strong
 {
     font-weight: 600;
+}
+
+h1, h2, .h2, h3
+{
+    font-weight: 700;
+}
+
+h1
+{
+    font-size: 22px;
+}
+
+h2, .h2
+{
+    font-size: 18px;
+}
+
+h3
+{
+    font-size: 16px;
 }
 
 /* Header  */
@@ -150,10 +125,7 @@ section
 
 #section-search
 {
-    margin: 0;
-    margin-bottom: 35px;
-    /* DOESN'T WORK !?! */
-    /* margin: 0, 0, 0, 35px; */
+    margin: 0 0 35px 0;
 }
 
 #section-search-title h1
@@ -163,10 +135,7 @@ section
 
 #search-form
 {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    /* DOESN'T WORK !?! */
-    /* margin: 20px, 0, 30px, 0; */
+    margin: 20px 0 30px 0;
 }
 
 #section-search form
@@ -291,10 +260,10 @@ section
     cursor: pointer;
 }
 
-.filters-list-icon
+.filters-list-icon:before
 {
-    /* Erase other display values, because of the fontawesome icon... */
-    display: flex !important;
+    /* Style the before element, as FontAwesome adds icons before the element */
+    display: flex;
     margin: -3px -5px;
     width: 50px;
     height: 50px;
@@ -586,9 +555,9 @@ section
 #activities-list
 {
     display: flex;
-    row-gap: 40px;
+    row-gap: var(--activity-gap);
     width: 100%;
-    height: 445px;
+    height: var(--activity-base-height);
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-between;
@@ -597,8 +566,8 @@ section
 .activity
 {
     flex-grow: 1;
-    /* Width to have a space of 40px between the columns */
-    width: 22.75%;
+    /* Width to have the gap between the 4 columns */
+    width: calc(25% - var(--activity-gap)*3/4);
 
     /* Remove hypertext decoration (<a> tag) */
     color: inherit; 
@@ -607,31 +576,27 @@ section
 
 .activity-full
 {
-    flex-basis: 100%;
+    height: var(--activity-base-height);
 }
 
 .activity-bigger
 {
-    /* Flex basis based on the height without the gap */
-    flex-basis: 53.4%;
+    height: calc(0.534 * var(--activity-base-height));
 }
 
 .activity-smaller
 {
-    /* Flex basis based on the height without the gap */
-    flex-basis: 37.6%;
+    height: calc(0.376 * var(--activity-base-height));
 }
 
 .activity-small
 {
-    /* Flex basis based on the height without the gap */
-    flex-basis: 43.8%;
+    height: calc(0.438 * var(--activity-base-height));
 }
 
 .activity-big
 {
-    /* Flex basis based on the height without the gap */
-    flex-basis: 47.2%;
+    height: calc(0.472 * var(--activity-base-height));
 }
 
 .activity-container
@@ -718,10 +683,17 @@ section
 footer
 {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--light-grey);
+}
+
+#footer-content
+{
+    display: flex;
     padding: 50px var(--global-sides-padding);
     gap: 20px;
-    
-    background-color: var(--light-grey);
 }
 
 .footer-column

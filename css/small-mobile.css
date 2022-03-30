@@ -1,0 +1,34 @@
+/* Accomodations section */
+
+#accomodations-most-popular-list
+{
+    flex-direction: column;
+}
+
+.card-vertical
+{
+    flex-basis: 100%;
+}
+
+.card-horizontal
+{
+    max-width: 100%;
+}
+
+/* Activities section */
+
+#activities-list
+{
+    height: initial;
+}
+
+.activity
+{
+    width: 100%;
+}
+
+.activity:nth-child(n)
+{
+    /* Reset the order */
+    order: initial;
+}

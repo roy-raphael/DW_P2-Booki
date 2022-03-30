@@ -5,23 +5,76 @@
 
 /* Accomodations section */
 
+#section-accomodations
+{
+    /* Mobile */
+    padding: 0;
+    flex-direction: column-reverse;
+    gap: 0;
+}
+
+#accomodations-marseille, #accomodations-most-popular
+{
+    /* Mobile */
+    padding-left: var(--global-sides-padding);
+    padding-right: var(--global-sides-padding);
+
+    border-radius: 0;
+}
+
 #accomodations-marseille
 {
-    flex-basis: 60%;
+    /* Mobile */
+    background-color: white;
 }
 
-#accomodations-most-popular
+#accomodations-most-popular-list
 {
-    flex-basis: 40%;
+    flex-direction: row;
 }
 
-.card-vertical
+.card-horizontal
 {
-    /* flex-basis to be sure to display 2 cards on the same line, whatever the gap is */
-    flex-basis: 34%;
+    /* flex-basis to be sure to display 3 cards on the same line, whatever the gap is */
+    flex-basis: 26%;
+    flex-grow: 1;
 }
 
-.card-image-horizontal
+/* Activities section */
+
+#activities-list
 {
-    margin-right: 0;
+    /* Double the height and add the 40px gap */
+    height: calc(2 * var(--activity-base-height) + 40px);
+}
+
+.activity
+{
+    /* Width to have the gap between the 2 columns */
+    width: calc(50% - var(--activity-gap)/2);
+}
+
+.activity:nth-child(2)
+{
+    order: 4;
+}
+
+.activity:nth-child(3)
+{
+    order: 5;
+}
+
+.activity:nth-child(4)
+{
+    order: 6;
+}
+
+.activity:nth-child(5)
+{
+    order: 2;
+}
+
+.activity:nth-child(6)
+{
+    order: 3;
 }

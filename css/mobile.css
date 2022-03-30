@@ -1,6 +1,7 @@
 :root
 {
     --global-sides-padding: 20px;
+    --activity-gap: 24px;
 }
 
 /* Header  */
@@ -48,10 +49,7 @@ nav p:active
 
 #search-form
 {
-    margin-top: 35px;
-    margin-bottom: 35px;
-    /* DOESN'T WORK !?! */
-    /* margin: 35px, 0, 35px, 0; */
+    margin: 35px 0;
 }
 
 #section-search form
@@ -124,19 +122,22 @@ nav p:active
     background-color: white;
 }
 
-#accomodations-marseille-list
+#accomodations-most-popular-list
 {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .card-vertical
 {
-    flex-basis: 100%;
+    /* flex-basis to be sure to display 2 cards on the same line, whatever the gap is */
+    flex-basis: 34%;
 }
 
-.card-image-horizontal
+.card-horizontal
 {
-    margin-right: 10px;
+    /* Fix the max width to display 2 card on the same line, and prevent the last one to fill the whole line */
+    max-width: calc(50% - 15px);
 }
 
 /* Activities section */
@@ -148,20 +149,30 @@ nav p:active
 
 #activities-list
 {
-    flex-direction: row;
-    height: initial;
-    row-gap: 25px;
+    /* flex-direction: row; */
+    /* height: initial; */
+    /* row-gap: 24px; */
+    /* Height for 3 cards */
+    height: calc(3 * 190px + 2 * var(--activity-gap));
 }
 
 .activity
 {
-    height: 190px;
-    flex-basis: 100%;
+    max-height: 190px;
+    /* flex-basis: 100%; */
+    /* Width to have the gap between the 2 columns */
+    width: calc(50% - var(--activity-gap)/2);
+}
+
+.activity:nth-child(2n)
+{
+    /* Reorder the cards to simulate an horizontal order (but we have a vertical order) */
+    order: 1;
 }
 
 /* Footer */
 
-footer
+#footer-content
 {
     flex-direction: column;
     gap: 45px;
