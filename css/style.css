@@ -281,7 +281,6 @@ section
 #information
 {
     display: flex;
-    /* margin-top: 30px; */
     justify-content: flex-start;
     align-items: flex-start;
 }
@@ -347,8 +346,6 @@ section
 #accomodations-marseille-list
 {
     flex-wrap: wrap;
-    /* justify-content: space-between; */
-    /* align-items: flex-start; */
 }
 
 #accomodations-most-popular-list

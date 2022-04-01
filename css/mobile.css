@@ -159,9 +159,6 @@ nav p:active
 
 #activities-list
 {
-    /* flex-direction: row; */
-    /* height: initial; */
-    /* row-gap: 24px; */
     /* Height for 3 cards */
     height: calc(3 * 190px + 2 * var(--activity-gap));
 }
@@ -169,7 +166,6 @@ nav p:active
 .activity
 {
     max-height: 190px;
-    /* flex-basis: 100%; */
     /* Width to have the gap between the 2 columns */
     width: calc(50% - var(--activity-gap)/2);
 }
