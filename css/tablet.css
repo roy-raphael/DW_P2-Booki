@@ -33,13 +33,6 @@
     flex-direction: row;
 }
 
-.card-horizontal
-{
-    /* flex-basis to be sure to display 3 cards on the same line, whatever the gap is */
-    flex-basis: 26%;
-    flex-grow: 1;
-}
-
 /* Activities section */
 
 #activities-list

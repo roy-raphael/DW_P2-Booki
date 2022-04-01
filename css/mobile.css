@@ -139,15 +139,10 @@ nav p:active
     flex-wrap: wrap;
 }
 
-.card-vertical
-{
-    /* flex-basis to be sure to display 2 cards on the same line, whatever the gap is */
-    flex-basis: 34%;
-}
-
-.card-horizontal
+.card
 {
     /* Fix the max width to display 2 card on the same line, and prevent the last one to fill the whole line */
+    flex-basis: 100%;
     max-width: calc(50% - 15px);
 }
 

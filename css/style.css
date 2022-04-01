@@ -383,6 +383,9 @@ section
 {
     display: flex;
     margin: 0 0 0 0;
+    /* flex-basis to be sure to display 3 cards on the same line (if row wrapped), whatever the gap is */
+    flex-basis: 26%;
+    flex-grow: 1;
 
     background-color: white;
     border-radius: 20px;
@@ -390,18 +393,6 @@ section
     /* Remove hypertext decoration (<a> tag) */
     color: inherit; 
     text-decoration: none;
-}
-
-.card-vertical
-{
-    /* flex-basis to be sure to display 3 cards on the same line, whatever the gap is */
-    flex-basis: 26%;
-    flex-grow: 1;
-}
-
-.card-horizontal
-{
-    width: 100%;
 }
 
 .card-container

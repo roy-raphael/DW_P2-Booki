@@ -5,12 +5,7 @@
     flex-direction: column;
 }
 
-.card-vertical
-{
-    flex-basis: 100%;
-}
-
-.card-horizontal
+.card
 {
     max-width: 100%;
 }
