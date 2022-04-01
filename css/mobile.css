@@ -66,12 +66,22 @@ nav p:active
 
 #search-button
 {
-    display: none;
+    margin-left: -20px;
+    width: 52px;
+
+    border-radius: 15px;
 }
 
-#search-icon
+#search-button:before
 {
+    /* Icon */
     display: initial;
+}
+
+#search-button:after
+{
+    /* Text */
+    display: none;
 }
 
 #filters, #information

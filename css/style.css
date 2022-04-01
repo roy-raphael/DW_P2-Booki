@@ -188,32 +188,27 @@ section
 #search-button
 {
     padding: 0 15px;
-
-    border-radius: 0 15px 15px 0;
+    
     cursor: pointer;
-}
-
-#search-icon
-{
-    display: none;
-    width: 52px;
-
-    border-radius: 15px;
-}
-
-#search-button, #search-icon
-{
     color: white;
     background-color: var(--dark-blue);
+    border-radius: 0 15px 15px 0;
     border-width: 0;
 }
 
-#search-icon
+#search-button:before
 {
-    margin-left: -20px;
-    min-width: 50px;
-
+    /* Icon */
     font-size: 17px;
+    display: none;
+}
+
+#search-button:after
+{
+    /* Text */
+    content: "Rechercher";
+    /* Force font family (replace by fontawesome font family) */
+    font-family: 'Raleway', sans-serif;
 }
 
 #filters
