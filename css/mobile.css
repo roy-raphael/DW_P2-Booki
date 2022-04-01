@@ -60,6 +60,7 @@ nav p:active
 #location-input
 {
     padding-left: 15px;
+    padding-right: 22px;
     flex-grow: 1;
     min-width: 10px;
 }

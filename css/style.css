@@ -169,6 +169,7 @@ section
 #location-input
 {
     padding-left: 15px;
+    padding-right: 2px;
 
     border: 1px solid var(--light-grey);
     border-radius: 0;
