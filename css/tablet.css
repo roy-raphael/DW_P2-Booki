@@ -35,10 +35,10 @@
 
 /* Activities section */
 
-#activities-list
+#activities-list /* S4 */
 {
     /* Double the height and add the 40px gap */
-    height: calc(2 * var(--activity-base-height) + 40px);
+    height: calc(2 * var(--activity-base-height) + var(--activity-gap));
 }
 
 .activity
